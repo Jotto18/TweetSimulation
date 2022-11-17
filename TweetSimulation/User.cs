@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TweetSimulation
 {
-    public class User
+    public class User : IUser
     {
         private string _userName;
         private List<User> _following = new List<User>();
@@ -64,11 +64,6 @@ namespace TweetSimulation
         public void AddTweet(string tweetToAdd)
         {
             _tweets.Add(tweetToAdd);
-        }
-
-        public void Introduce()
-        {
-            Console.WriteLine("My name is {0}", _userName);
         }
 
         public void CreatePost()
